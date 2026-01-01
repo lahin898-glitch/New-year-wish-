@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy New Year</title>
+
+  <!-- Meta for clean previews -->
+  <meta name="description" content="Happy New Year — elegant animated text." />
+  <meta property="og:title" content="Happy New Year 2026" />
+  <meta property="og:description" content="Celebrate with a stylish animated wish." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#111111" />
+
+  <style>
+    /* Base reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      font-family: "Poppins", sans-serif;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Animated gradient background */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(270deg, #ff375f, #ffd83d, #3dd7ff, #ad6eff);
+      background-size: 800% 800%;
+      animation: bgShift 20s ease infinite;
+      opacity: 0.15;
+      z-index: 0;
+    }
+    @keyframes bgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Center container */
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Main headline */
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: linear-gradient(90deg, #ff375f, #ffd83d, #3dd7ff, #ad6eff);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: textGlow 6s ease-in-out infinite;
+    }
+    @keyframes textGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Subtext */
+    p {
+      font-size: 1.2rem;
+      margin-top: 12px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Elegant button */
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+    .btn:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy New Year 2026</h1>
+    <p>Wishing you success, joy, and new beginnings.</p>
+    <a href="https://example.com/new-year" class="btn" target="_blank">Celebrate More</a>
+  </div>
+</body>
+</html>
